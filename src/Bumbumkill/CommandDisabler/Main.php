@@ -7,16 +7,17 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase {
 
+private $commands;
 public function onEnable(){
     @mkdir($this->getDataFolder());
 		$this->saveResource("commands.yml");
 		$data = new Config($this->getDataFolder()."commands.yml", Config::YAML);
-		$this->cmd = $data->get("cmd");
+		$this->commands = $data->get("cmd");
 	}
 public function disableCommand(){
 		$cmp = $this->getServer()->getCommandMap();
-		foreach($this->cmd as $cmdlist){
-		         $result = $map->getCommand($cmdlist);
+		foreach($this->commands as $cmdlist){
+		         $result = $cmp->getCommand($cmdlist);
 		          $cmp->unregister($result);
 		}
 		return true;

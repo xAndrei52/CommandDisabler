@@ -7,8 +7,6 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase {
 
-private $cmd;
-
 public function onEnable(){
     @mkdir($this->getDataFolder());
 		$this->saveResource("commands.yml");

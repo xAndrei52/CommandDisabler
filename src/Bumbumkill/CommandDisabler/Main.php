@@ -7,7 +7,7 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase {
 
-public $cmd;
+private $cmd;
 
 public function onEnable(){
     @mkdir($this->getDataFolder());

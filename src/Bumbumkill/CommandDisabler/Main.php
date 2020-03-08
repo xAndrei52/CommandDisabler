@@ -16,7 +16,7 @@ public function onEnable(){
 public function disableCommand(){
 		$cmp = $this->getServer()->getCommandMap();
 		foreach($this->cmd as $cmdlist){
-		         $result = $map->getCommand($cmdname);
+		         $result = $map->getCommand($cmdlist);
 		          $cmp->unregister($result);
 		}
 		return true;

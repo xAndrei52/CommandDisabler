@@ -13,6 +13,7 @@ public function onEnable(){
 		$this->saveResource("commands.yml");
 		$data = new Config($this->getDataFolder()."commands.yml", Config::YAML);
 		$this->commands = $data->get("cmd");
+                $this->disableCommand();
 	}
 public function disableCommand(){
 		$cmp = $this->getServer()->getCommandMap();

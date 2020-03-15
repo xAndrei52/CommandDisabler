@@ -1,3 +1,4 @@
 cmd:
 - "status"
-- "pl"
+- "is kick"
+- "is fire"
